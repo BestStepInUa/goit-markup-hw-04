@@ -9,6 +9,7 @@
   --light-bg-cl: #f4f4fd;
   --pressed-state-cl: #404bbf;
   --accent-cl: #e7e9fc;
+  --light-slate-cl: #8e8f99;
   /* The main number of elements in Flexbox grid */
   --items: 3;
   /* The main gap indent in Flexbox grid */
@@ -146,9 +147,15 @@ img {
 }
 /* Hero section styles */
 .hero {
+  max-width: 1440px;
+  margin: 0 auto;
   padding-top: 188px;
   padding-bottom: 188px;
   background-color: var(--dark-bg-cl);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
 }
 .hero-title {
@@ -214,6 +221,13 @@ img {
 }
 .features-list-item-decs {
 }
+.features-icons {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 2.141px;
+}
 /* What are we doing? section styles */
 .we-doing {
   padding-bottom: 120px;
@@ -257,6 +271,36 @@ img {
   line-height: 1.2;
 }
 .team-list-item-position {
+}
+/* Customer section styles */
+.customer {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.customer-list {
+  display: flex;
+  gap: var(--indent);
+  justify-content: center;
+  --items: 6;
+}
+.customers-list-item {
+}
+.customer-list-item-link {
+  display: flex;
+  width: 168px;
+  height: 88px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--light-slate-cl);
+}
+.customer-list-item-link:hover {
+  border-color: var(--pressed-state-cl);
+}
+.customer-list-item-link:hover .customer-list-item-link-icon {
+  fill: var(--pressed-state-cl);
+}
+.customer-list-item-link-icon {
 }
 /* Portfolio page styles */
 .portfolio {
