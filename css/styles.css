@@ -15,6 +15,10 @@
   --hero-gradient: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
   --team-card-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  --portfolio-card-hover-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  --portfolio-filter-btn-hover-focus-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08),
+    0px 3px 1px 0px rgba(0, 0, 0, 0.1);
   /* The main number of elements in Flexbox grid */
   --items: 3;
   /* The main gap indent in Flexbox grid */
@@ -296,7 +300,6 @@ img {
 .social-media-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
   height: 40px;
-  padding: 12px;
   border-radius: 50%;
   background-color: var(--primary-brand-cl);
 }
@@ -305,7 +308,9 @@ img {
   background-color: var(--pressed-state-cl);
 }
 .social-media-item-link {
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
 }
 .social-media-icon {
   flex-shrink: 0;
@@ -376,6 +381,7 @@ img {
   border: 1px solid transparent;
   background-color: var(--pressed-state-cl);
   color: var(--white-cl);
+  box-shadow: var(--portfolio-filter-btn-hover-focus-shadow);
 }
 /* Portfolio list styles */
 .portfolio-list {
@@ -390,6 +396,10 @@ img {
   padding: 32px 16px;
   border: 1px solid var(--accent-cl);
   border-top: none;
+}
+.portfolio-list-item:hover .portfolio-list-item-card-content {
+  border: 1px solid var(--ligth-cl);
+  box-shadow: var(--portfolio-card-hover-shadow);
 }
 .portfolio-list-item-link-title {
   margin-bottom: 8px;
@@ -428,9 +438,9 @@ img {
   flex-direction: column;
 }
 .footer-social-media-container-title {
+  margin-bottom: 16px;
   color: var(--white-cl);
   font-weight: 500;
-  margin-bottom: 16px;
 }
 .footer-social-media-list {
   display: flex;
@@ -443,7 +453,6 @@ img {
 .footer-social-media-list-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
   height: 40px;
-  padding: 8px;
   border-radius: 50%;
   background-color: var(--primary-brand-cl);
 }
@@ -452,6 +461,9 @@ img {
   background-color: var(--green-bg-cl);
 }
 .footer-social-media-list-item-link {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
 }
 .footer-social-media-list-item-link-icon {
   flex-shrink: 0;
