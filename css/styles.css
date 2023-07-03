@@ -23,6 +23,8 @@
     0px 3px 1px 0px rgba(0, 0, 0, 0.1);
   --modal-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  --main-trasition-duration: 250ms;
+  --main-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   /* The main number of elements in Flexbox grid */
   --items: 3;
   /* The main gap indent in Flexbox grid */
@@ -137,9 +139,12 @@ img {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 .header-list-link {
+  position: relative;
   color: var(--dark-cl);
   font-weight: 500;
-  position: relative;
+  transition-property: color;
+  transition-duration: var(--main-trasition-duration);
+  transition-timing-function: var(--main-timing-function);
 }
 .header-list-link.active::after {
   content: '';
@@ -165,6 +170,9 @@ img {
 }
 .header-address-list-link {
   color: var(--text-cl);
+  transition-property: color;
+  transition-duration: var(--main-trasition-duration);
+  transition-timing-function: var(--main-timing-function);
 }
 .header .link:hover,
 .header .link:focus {
@@ -206,6 +214,9 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  transition-property: background-color;
+  transition-duration: var(--main-trasition-duration);
+  transition-timing-function: var(--main-timing-function);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -318,6 +329,9 @@ img {
   height: 40px;
   border-radius: 50%;
   background-color: var(--primary-brand-cl);
+  transition-property: background-color;
+  transition-duration: var(--main-trasition-duration);
+  transition-timing-function: var(--main-timing-function);
 }
 .social-media-item:hover,
 .social-media-item:focus {
@@ -354,9 +368,15 @@ img {
   height: 88px;
   border: 1px solid var(--light-slate-cl);
   border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: var(--main-trasition-duration);
+  transition-timing-function: var(--main-timing-function);
 }
 .customer-list-item-link-icon {
   fill: var(--light-slate-cl);
+  transition-property: fill;
+  transition-duration: var(--main-trasition-duration);
+  transition-timing-function: var(--main-timing-function);
 }
 .customer-list-item-link:hover,
 .customer-list-item-link:focus {
@@ -391,6 +411,9 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
+  transition-property: border, background-color, color, box-shadow;
+  transition-duration: var(--main-trasition-duration);
+  transition-timing-function: var(--main-timing-function);
 }
 .portfolio-filter-list-item-btn:hover,
 .portfolio-filter-list-item-btn:focus {
@@ -412,9 +435,13 @@ img {
   padding: 32px 16px;
   border: 1px solid var(--accent-cl);
   border-top: none;
+  transition-property: border, box-shadow;
+  transition-duration: var(--main-trasition-duration);
+  transition-timing-function: var(--main-timing-function);
 }
 .portfolio-list-item:hover .portfolio-list-item-card-content {
   border: 1px solid var(--ligth-cl);
+  border-top: none;
   box-shadow: var(--portfolio-card-hover-shadow);
 }
 .portfolio-list-item-link-title {
@@ -471,6 +498,9 @@ img {
   height: 40px;
   border-radius: 50%;
   background-color: var(--primary-brand-cl);
+  transition-property: background-color;
+  transition-duration: var(--main-trasition-duration);
+  transition-timing-function: var(--main-timing-function);
 }
 .footer-social-media-list-item:hover,
 .footer-social-media-list-item:focus {
@@ -490,38 +520,55 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 672px;
   flex-shrink: 0;
+  width: 100%;
+  height: 100%;
   background-color: var(--modal-bg-color);
 }
 .backdrop.is-hidden {
   opacity: 0;
-  pointer-events: none;
   visibility: hidden;
+  pointer-events: none;
 }
 .modal {
   position: relative;
+  top: 80px;
   width: 408px;
   height: 584px;
+  margin: 0 auto;
   border-radius: 4px;
   background-color: var(--modal-form-bg-cl);
   box-shadow: var(--modal-shadow);
-  margin: 0 auto;
-  top: 80px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--main-timing-function) var(--main-transition-timing-function);
 }
 .modal-close-btn {
   position: absolute;
   top: 24px;
   right: 24px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 24px;
   background-color: var(--accent-cl);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition-property: background-color;
+  transition-duration: var(--main-trasition-duration);
+  transition-timing-function: var(--main-timing-function);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--pressed-state-cl);
 }
 .close-modal-icon {
   fill: var(--dark-cl);
+  transition-property: fill;
+  transition-duration: var(--main-trasition-duration);
+  transition-timing-function: var(--main-timing-function);
+}
+.modal-close-btn:hover .close-modal-icon,
+.modal-close-btn:focus .close-modal-icon {
+  fill: var(--white-cl);
 }
