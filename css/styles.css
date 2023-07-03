@@ -532,10 +532,10 @@ img {
 }
 .modal {
   position: relative;
-  top: 80px;
+  top: 50%;
+  left: 50%;
   width: 408px;
   height: 584px;
-  margin: 0 auto;
   border-radius: 4px;
   background-color: var(--modal-form-bg-cl);
   box-shadow: var(--modal-shadow);
