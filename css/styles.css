@@ -315,7 +315,7 @@ img {
 .team-list-item-img {
 }
 .team-list-item-card-content {
-  padding: 32px 16px;
+  padding: 32px 0;
   text-align: center;
 }
 .team-list-item-name {
@@ -331,9 +331,10 @@ img {
 .social-media-list {
   display: flex;
   gap: var(--indent);
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   --items: 4;
+  padding: 0 16px;
 }
 .social-media-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
