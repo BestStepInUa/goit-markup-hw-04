@@ -15,6 +15,8 @@
   --modal-form-bg-cl: #fcfcfc;
 
   --hero-gradient: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+  --header-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
   --team-card-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   --portfolio-card-hover-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -110,6 +112,7 @@ img {
 /* Header styles */
 .header {
   border-bottom: 1px solid var(--accent-cl);
+  box-shadow: var(--header-shadow);
 }
 .header-container {
   display: flex;
@@ -146,10 +149,13 @@ img {
   transition-duration: var(--main-trasition-duration);
   transition-timing-function: var(--main-timing-function);
 }
+.header-list-link.active {
+  color: var(--pressed-state-cl);
+}
 .header-list-link.active::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   display: block;
   width: 100%;
@@ -487,6 +493,7 @@ img {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer-logo-text-container {
   margin-right: 120px;
@@ -521,6 +528,11 @@ img {
 }
 .footer-social-media-list-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+.footer-social-media-list-item-link {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
   height: 40px;
   border-radius: 50%;
   background-color: var(--primary-brand-cl);
@@ -528,14 +540,9 @@ img {
   transition-duration: var(--main-trasition-duration);
   transition-timing-function: var(--main-timing-function);
 }
-.footer-social-media-list-item:hover,
-.footer-social-media-list-item:focus {
+.footer-social-media-list-item-link:hover,
+.footer-social-media-list-item-link:focus {
   background-color: var(--green-bg-cl);
-}
-.footer-social-media-list-item-link {
-  display: flex;
-  justify-content: center;
-  padding: 8px;
 }
 .footer-social-media-list-item-link-icon {
   flex-shrink: 0;
