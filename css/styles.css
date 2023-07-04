@@ -268,6 +268,9 @@ img {
 }
 .features-list-item-icon-thumb {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
   flex-shrink: 0;
   height: 112px;
   padding: 24px 100px;
@@ -306,6 +309,7 @@ img {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white-bg-cl);
   box-shadow: var(--team-card-shadow);
+  padding: 32px 0;
 }
 .team-list-item-img {
 }
@@ -336,6 +340,7 @@ img {
 .social-media-item-link {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 12px;
   height: 40px;
   border-radius: 50%;
@@ -538,9 +543,7 @@ img {
   height: 40px;
   border-radius: 50%;
   background-color: var(--primary-brand-cl);
-  transition-property: background-color;
-  transition-duration: var(--main-trasition-duration);
-  transition-timing-function: var(--);
+  transition: background-color var(--main-trasition-duration) var(--main-transition-timing-function);
 }
 .footer-social-media-list-item-link:hover,
 .footer-social-media-list-item-link:focus {
