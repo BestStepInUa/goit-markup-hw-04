@@ -532,6 +532,7 @@ img {
 .footer-social-media-list-item-link {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 8px;
   height: 40px;
   border-radius: 50%;
