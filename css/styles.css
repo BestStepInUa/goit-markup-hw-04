@@ -147,7 +147,7 @@ img {
   font-weight: 500;
   transition-property: color;
   transition-duration: var(--main-trasition-duration);
-  transition-timing-function: var(--main-timing-function);
+  transition-timing-function: var(--main-transition-timing-function);
 }
 .header-list-link.active {
   color: var(--pressed-state-cl);
@@ -178,7 +178,7 @@ img {
   color: var(--text-cl);
   transition-property: color;
   transition-duration: var(--main-trasition-duration);
-  transition-timing-function: var(--main-timing-function);
+  transition-timing-function: var(--main-transition-timing-function);
 }
 .header .link:hover,
 .header .link:focus {
@@ -222,7 +222,7 @@ img {
   letter-spacing: 0.04em;
   transition-property: background-color;
   transition-duration: var(--main-trasition-duration);
-  transition-timing-function: var(--main-timing-function);
+  transition-timing-function: var(--main-transition-timing-function);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -332,21 +332,21 @@ img {
 }
 .social-media-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--primary-brand-cl);
-  transition-property: background-color;
-  transition-duration: var(--main-trasition-duration);
-  transition-timing-function: var(--main-timing-function);
-}
-.social-media-item:hover,
-.social-media-item:focus {
-  background-color: var(--pressed-state-cl);
 }
 .social-media-item-link {
   display: flex;
   justify-content: center;
   padding: 12px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-brand-cl);
+  transition-property: background-color;
+  transition-duration: var(--main-trasition-duration);
+  transition-timing-function: var(--main-transition-timing-function);
+}
+.social-media-item-link:hover,
+.social-media-item-link:focus {
+  background-color: var(--pressed-state-cl);
 }
 .social-media-icon {
   flex-shrink: 0;
@@ -376,13 +376,13 @@ img {
   border-radius: 4px;
   transition-property: border-color;
   transition-duration: var(--main-trasition-duration);
-  transition-timing-function: var(--main-timing-function);
+  transition-timing-function: var(--main-transition-timing-function);
 }
 .customer-list-item-link-icon {
   fill: var(--light-slate-cl);
   transition-property: fill;
   transition-duration: var(--main-trasition-duration);
-  transition-timing-function: var(--main-timing-function);
+  transition-timing-function: var(--main-transition-timing-function);
 }
 .customer-list-item-link:hover,
 .customer-list-item-link:focus {
@@ -419,7 +419,7 @@ img {
   text-align: center;
   transition-property: border, background-color, color, box-shadow;
   transition-duration: var(--main-trasition-duration);
-  transition-timing-function: var(--main-timing-function);
+  transition-timing-function: var(--main-transition-timing-function);
 }
 .portfolio-filter-list-item-btn:hover,
 .portfolio-filter-list-item-btn:focus {
@@ -443,9 +443,10 @@ img {
   border-top: none;
   transition-property: border, box-shadow;
   transition-duration: var(--main-trasition-duration);
-  transition-timing-function: var(--main-timing-function);
+  transition-timing-function: var(--main-transition-timing-function);
 }
-.portfolio-list-item:hover .portfolio-list-item-card-content {
+.portfolio-list-item-link:hover .portfolio-list-item-card-content,
+.portfolio-list-item-link:focus .portfolio-list-item-card-content {
   border: 1px solid var(--ligth-cl);
   border-top: none;
   box-shadow: var(--portfolio-card-hover-shadow);
@@ -478,8 +479,8 @@ img {
   transition-duration: var(--main-trasition-duration);
   transition-timing-function: var(--main-transition-timing-function);
 }
-.portfolio-list-item:hover .portfolio-overlay,
-.portfolio-list-item:focus .portfolio-overlay {
+.portfolio-list-item-link:hover .portfolio-overlay,
+.portfolio-list-item-link:focus .portfolio-overlay {
   transform: translateY(0);
 }
 .portfolio-overlay-text {
@@ -539,7 +540,7 @@ img {
   background-color: var(--primary-brand-cl);
   transition-property: background-color;
   transition-duration: var(--main-trasition-duration);
-  transition-timing-function: var(--main-timing-function);
+  transition-timing-function: var(--);
 }
 .footer-social-media-list-item-link:hover,
 .footer-social-media-list-item-link:focus {
@@ -574,7 +575,7 @@ img {
   background-color: var(--modal-form-bg-cl);
   box-shadow: var(--modal-shadow);
   transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--main-timing-function) var(--main-transition-timing-function);
+  transition: transform var(--main-transition-duration) var(--main-transition-timing-function);
 }
 .modal-close-btn {
   position: absolute;
@@ -590,7 +591,7 @@ img {
   background-color: var(--accent-cl);
   transition-property: background-color;
   transition-duration: var(--main-trasition-duration);
-  transition-timing-function: var(--main-timing-function);
+  transition-timing-function: var(--main-transition-timing-function);
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
@@ -600,7 +601,7 @@ img {
   fill: var(--dark-cl);
   transition-property: fill;
   transition-duration: var(--main-trasition-duration);
-  transition-timing-function: var(--main-timing-function);
+  transition-timing-function: var(--main-transition-timing-function);
 }
 .modal-close-btn:hover .close-modal-icon,
 .modal-close-btn:focus .close-modal-icon {
