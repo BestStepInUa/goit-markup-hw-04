@@ -315,7 +315,7 @@ img {
 .team-list-item-img {
 }
 .team-list-item-card-content {
-  padding: 32px 0;
+  padding: 32px 16px;
   text-align: center;
 }
 .team-list-item-name {
@@ -334,7 +334,6 @@ img {
   justify-content: center;
   align-items: center;
   --items: 4;
-  padding: 16px;
 }
 .social-media-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
@@ -573,6 +572,8 @@ img {
   width: 100%;
   height: 100%;
   background-color: var(--modal-bg-color);
+  transition: opacity var(--main-transition-duration) var(--main-transition-timing-function),
+    visibility var(--main-transition-duration) var(--main-transition-timing-function);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -580,11 +581,11 @@ img {
   pointer-events: none;
 }
 .modal {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   border-radius: 4px;
   background-color: var(--modal-form-bg-cl);
   box-shadow: var(--modal-shadow);
@@ -595,21 +596,24 @@ img {
   position: absolute;
   top: 24px;
   right: 24px;
+  width: 24px;
+  height: 24px;
   display: flex;
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  padding: 8px;
+  padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 24px;
+  border-radius: 50%;
   background-color: var(--accent-cl);
-  transition-property: background-color;
+  transition-property: background-color, border;
   transition-duration: var(--main-trasition-duration);
   transition-timing-function: var(--main-transition-timing-function);
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: var(--pressed-state-cl);
+  border: none;
 }
 .close-modal-icon {
   fill: var(--dark-cl);
