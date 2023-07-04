@@ -469,7 +469,7 @@ img {
   height: 100%;
   transform: translateY(100%);
   transition-property: transform;
-  transition-duration: 5s;
+  transition-duration: var(--main-trasition-duration);
   transition-timing-function: var(--main-transition-timing-function);
 }
 .portfolio-list-item:hover .portfolio-overlay,
