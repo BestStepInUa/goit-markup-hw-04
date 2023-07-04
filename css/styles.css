@@ -311,7 +311,6 @@ img {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white-bg-cl);
   box-shadow: var(--team-card-shadow);
-  padding: 32px 0;
 }
 .team-list-item-img {
 }
@@ -335,6 +334,7 @@ img {
   justify-content: center;
   align-items: center;
   --items: 4;
+  padding: 16px;
 }
 .social-media-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
