@@ -383,7 +383,7 @@ img {
   border: 1px solid var(--light-slate-cl);
   color: var(--light-slate-cl);
   border-radius: 4px;
-  transition-property: border-color;
+  transition-property: color;
   transition-duration: var(--main-trasition-duration);
   transition-timing-function: var(--main-transition-timing-function);
 }
@@ -395,7 +395,7 @@ img {
 }
 .customer-list-item-link:hover,
 .customer-list-item-link:focus {
-  border-color: var(--pressed-state-cl);
+  color: var(--pressed-state-cl);
 }
 .customer-list-item-link:hover .customer-list-item-link-icon,
 .customer-list-item-link:focus .customer-list-item-link-icon {
