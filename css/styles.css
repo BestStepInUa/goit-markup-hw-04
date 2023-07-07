@@ -389,18 +389,11 @@ img {
 }
 .customer-list-item-link-icon {
   fill: currentColor;
-  transition-property: fill;
-  transition-duration: var(--main-trasition-duration);
-  transition-timing-function: var(--main-transition-timing-function);
 }
 .customer-list-item-link:hover,
 .customer-list-item-link:focus {
   color: var(--pressed-state-cl);
   border-color: var(--pressed-state-cl);
-}
-.customer-list-item-link:hover .customer-list-item-link-icon,
-.customer-list-item-link:focus .customer-list-item-link-icon {
-  fill: var(--pressed-state-cl);
 }
 /* Portfolio page styles */
 .portfolio {
